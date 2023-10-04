@@ -1,20 +1,22 @@
 
 <!-- Toolbar -->
-<div>
-  <div>
-    <h2>Search</h2>
+<nav class="bg-slate-100 md:flex justify-between h-20 items-center"> 
+  <!-- <div class="md:flex justify-between mt-10 mb-10"> -->
     <div>
-      <ul>
-        <li>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contacts</a>
-          <a href="">Search</a>
-        </li>
+      <h2 class="ml-10 text-2xl">gSearch</h2>
+    </div>
+    <div>search bar</div>
+    <div class="flex items-center">
+      <ul class="flex mr-10 gap-5 justify-center">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contacts</a></li>
       </ul>
     </div>
-  </div>
-</div>
+  <!-- </div> -->
+</nav>
+
+<app-home></app-home>
 
 
 <router-outlet></router-outlet>
