@@ -1,19 +1,29 @@
 
 <!-- Toolbar -->
 <nav class="bg-slate-100 md:flex justify-between h-20 items-center"> 
-  <!-- <div class="md:flex justify-between mt-10 mb-10"> -->
     <div>
-      <h2 class="ml-10 text-2xl">gSearch</h2>
+      <div class="flex justify-between items-center">
+        <h2 class="ml-8 text-2xl">gSearch</h2>
+        <div class="px-4 cursor-pointer md:hidden" id="nav">
+          <svg class="w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div>search bar</div>
-    <div class="flex items-center">
-      <ul class="flex mr-10 gap-5 justify-center">
+    <!-- <div>
+      <input class="border-slate-400 mr-1 border-2 rounded-full py-1 px-5" type="text"  placeholder="Username...">
+      <svg class="w-7 inline-block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+      </svg>
+    </div> -->
+    <div class="">
+      <ul class="flex text-sm mr-10 gap-5 items-center" id="menu">
         <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="">About</a></li> 
         <li><a href="">Contacts</a></li>
       </ul>
     </div>
-  <!-- </div> -->
 </nav>
 
 <app-home></app-home>
