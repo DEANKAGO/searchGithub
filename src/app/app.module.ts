@@ -18,7 +18,10 @@ import { SearchComponent } from './components/search/search.component';
   imports: [
     BrowserModule, 
     AppRoutingModule,
-
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent},
+      { path: 'search', component: SearchComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
