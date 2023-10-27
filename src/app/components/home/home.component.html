@@ -10,10 +10,12 @@
                 gSearch is a valuable resource for developers and organizations looking to integrate GitHub data into their applications, analyze repositories, track issues, and more.
             </p>
             <div class="flex justify-center space-x-2 md:justify-start">
-                <input class="border-slate-400 w-2/4 mr-1 border-2 rounded-full py-1 px-5" type="text"  placeholder="Username...">
-                <svg class="w-7 inline-block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
-                </svg> 
+                <input [(ngModel)]="username" class="border-slate-400 w-2/4 mr-1 border-2 rounded-full py-1 px-5" type="text"  placeholder="Username...">
+                <button (click)="search()">
+                    <svg class="w-7 inline-block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                    </svg>
+                </button> 
             </div>
         </div>
         <div class="md:w-1/2">
@@ -26,11 +28,14 @@
 
 <section>
     <div class="container w-3/4 flex flex-col items-center space-y-12 px-6 mx-auto mb32 mt-10 bg-red-200">
-        <h2 class="max-w-md pt-5 text-3xl md:text-4xl md:text-left">About Us
+        <h2 class="max-w-md pt-5 text-3xl md:text-4xl md:text-left">
+            About Us
         </h2>
-        <p class="max-w-sm w-full pb-5 md:text-left">gSearch is a powerful online tool designed for developers, tech enthusiasts, and open-source enthusiasts alike. It simplifies the process of finding GitHub repositories and code snippets on virtually any topic, making it an invaluable resource for discovering, contributing to, and collaborating on exciting open-source projects.
+        <p class="max-w-sm text-center w-full pb-5">
+            gSearch is a powerful online tool designed for developers, tech enthusiasts, and open-source enthusiasts alike. It simplifies the process of finding GitHub repositories and code snippets on virtually any topic, making it an invaluable resource for discovering, contributing to, and collaborating on exciting open-source projects. rtvuybjncgfh
         </p>
     </div>
+    
 </section>
 
 <app-footer></app-footer>
