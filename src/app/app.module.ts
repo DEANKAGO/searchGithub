@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component'; 
 
 import { UsersService } from './services/users.service';
+import { CountMonthsPipe } from './pipe/count-months.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { UsersService } from './services/users.service';
     HomeComponent,
     FooterComponent,
     SearchComponent,
+    CountMonthsPipe,
   ],
   imports: [
     BrowserModule, 
