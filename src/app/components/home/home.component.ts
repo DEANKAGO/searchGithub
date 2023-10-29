@@ -8,18 +8,9 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  username: string = '';
-  results: any;
 
-  constructor(private usersService: UsersService) {}
+  constructor() {}
 
-  search(){
-    this.usersService.searchUser(this.username).subscribe((user) => {
-      this.results = user
-      // console.log(user);
-      console.log(this.results )
-    })
-  }
 
 
 
