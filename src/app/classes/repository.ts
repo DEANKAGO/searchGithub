@@ -8,6 +8,6 @@ export class Repository {
         public forks:number,
         public created_at:Date,
         public htmlURL:string,
-        public cloneURL:string,
+        public homepage:string,
     ){}
 }

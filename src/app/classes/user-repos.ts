@@ -8,6 +8,6 @@ export class UserRepos {
         public watchers:number,
         public forks:number,
         public created_at:Date,
-        public htmlURL:string
+        public htmlURL:string,
     ){}
 }

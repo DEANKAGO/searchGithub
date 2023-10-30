@@ -28,7 +28,7 @@ export class HomeComponent {
       alert("Search field cannot be empty");
       return;
     }
-    this.info.repoSearch(`@api.github.com/search/repositories?q=${this.inputData}&order=desc&sort=stars&page=1&per_page=17`)
+    this.info.repoSearch(`@api.github.com/users/search/repos?q=${this.inputData}&order=desc&sort=stars&page=1&per_page=17`)
     this.router.navigate([''])
   }
 

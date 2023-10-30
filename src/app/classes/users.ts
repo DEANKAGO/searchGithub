@@ -1,9 +1,9 @@
 export class Users {
+    date: any;
     constructor(
         public name: string,
         public following: number,
         public followers: number,
-        public publicRepositories: number,
         public bio: string,
         public image: string,
         public creationDate: Date,
