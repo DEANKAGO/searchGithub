@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* *{
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 90% -25%;
+} */
+

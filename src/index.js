@@ -1,10 +1,8 @@
-const nav = document.querySelector ("#nav");
-const menu = document.querySelector ("#menu");
+const btn = document.getElementById('menu-btn')
+const nav = document.getElementById('menu')
 
-nav.addEventListener("click", () =>{
-    if ( menu.classList.contains("hidden")){
-      menu.classList.remove("hidden");
-    } else {
-        menu.classList.add("hidden");
-    }
-  })
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open')
+  nav.classList.toggle('flex')
+  nav.classList.toggle('hidden')
+})

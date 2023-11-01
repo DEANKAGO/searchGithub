@@ -13,6 +13,7 @@ export class HomeComponent {
 
   inputData: string='';
 
+
   constructor(private info:UsersService, public router: Router) {}
 
   userSearch(myForm: NgForm) {

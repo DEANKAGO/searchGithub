@@ -6,12 +6,36 @@
     <div class="pt-2">
       <p>gSearch</p>
     </div>
-    <div class="space-x-6">
+    <div class="hidden space-x-6 md:flex">
       <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" href="" class="hover:text-slate-400">Home</a>
       <a routerLinkActive="active" ariaCurrentWhenActive="page" href="" class="hover:text-slate-400">About</a>
       <a href="" class="hover:text-slate-400">Contacts</a>
     </div>
+
+      <!-- menu Icon -->
+      <button
+          id="menu-btn"
+          class="block icon md:hidden focus:outline-none"
+        >
+          <span class="icon-top"></span>
+          <span class="icon-middle"></span>
+          <span class="icon-bottom"></span>
+      </button>
+
   </div>
+
+  <!-- mobile menu -->
+    <div class="md:hidden">
+      <div
+        id="menu"
+        class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+      >
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contacts</a>
+      </div>
+    </div>
+    <script src="../app/icon.js" ></script>
 </nav>
 
 
