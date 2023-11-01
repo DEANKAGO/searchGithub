@@ -39,8 +39,8 @@ export class UsersService {
     this.repos.length = 0
     this.http.fetchApi(`${url}`).subscribe((response) => {
       this.users.name = response.login;
-      this.users.following = response.following_url;
-      this.users.followers = response.followers_url;
+      this.users.following = response.following;
+      this.users.followers = response.followers;
       this.users.bio = response.bio;
       this.users.image = response.avatar_url;
       this.users.creationDate = response.created_at;

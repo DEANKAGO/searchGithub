@@ -1,126 +1,60 @@
 <section>
-    <div class="container flex flex-col items-center pb-5 px-6 mx-auto mt-7 space-y-3 md:space-y-0 md:flex-row">
-        <div class="flex flex-col items-center space-y-6 md:w-1/2">
-            <img class="rounded-full w-32 h-32 mt-10" src="assets/images/qqqq.jpg" alt="">
-            <div>
-                <a href="">View Profile</a>
-            </div>
-        </div>
-        <div class="flex flex-col pl-10 space-y-1 md:w-1/2">
-            <p>Name: John Madondo </p>        
-            <p>Following: 20</p>
-            <p>Followers: 30</p>            
-            <p>Joined:2years ago</p>
-        </div>
+  <div
+    *ngFor="let detail of user"
+    class="container flex flex-col items-center pb-5 px-6 mx-auto mt-7 space-y-3 md:space-y-0 md:flex-row"
+  >
+    <div class="flex flex-col items-center space-y-6 md:w-1/2">
+      <img
+        class="rounded-full w-32 h-32 mt-10"
+        src="{{ detail.image }}"
+        alt=""
+      />
+      <div>
+        <a (click)="redirection(detail.htmlURL)" href="">View Profile</a>
+      </div>
     </div>
+    <div class="flex flex-col pl-10 space-y-1 md:w-1/2">
+      <p>Name: {{ detail.name }}</p>
+      <p>Following: {{ detail.following }}</p>
+      <p>{{ detail.followers }} :Followers</p>
+      <p>Joined: {{ detail.creationDate | date }}</p>
+    </div>
+  </div>
 </section>
 
 <!-- Repos section -->
 <section>
-    <div class="flex justify-center items-center px-6 mt-10">
-        <h2 class="text-center max-w-md pt-5 text-3xl md:text-4xl md:text-left">
-            Repositories
-        </h2>
+  <div class="flex justify-center items-center px-6 mt-10">
+    <h2 class="text-center max-w-md pt-5 text-3xl md:text-4xl md:text-left">
+      Repositories
+    </h2>
+  </div>
+
+  <div
+    class="container flex flex-wrap pb-5 px-6 mx-auto mt-10 space-y-3 md:space-y-0 md:flex-row"
+  >
+    <div
+      *ngFor="let rep of repos"
+      class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4"
+    >
+      <div class="relative min-h-16 max-w-sm rounded overflow-hidden shadow-lg h-full">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ rep.name }}</div>
+          <p class="text-gray-700 text-base">
+            {{
+              rep?.description?.length > 10
+                ? rep?.description?.split(" ").slice(1, 10).join(" ") + "..."
+                : rep?.description
+            }}.
+          </p>
+        </div>
+        <div class="px-6 py-4 absolute bottom-0">
+          <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            ><a target="_blank" href="{{ rep.htmlURL }}">View Repo</a></span
+          >
+        </div>
+      </div>
     </div>
-      
-    <div class="container flex flex-wrap pb-5 px-6 mx-auto mt-10 space-y-3 md:space-y-0 md:flex-row">
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="assets/images/qqqq.jpg" alt="Card Image">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Repository Name</div>
-                  <p class="text-gray-700 text-base">
-                    Description.
-                  </p>
-                </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">View Repo</span>
-                  <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Tag2</span> -->
-                </div>
-            </div>
-        </div>
-        
-          
-    </div>
+  </div>
 </section>
-
