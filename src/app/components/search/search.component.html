@@ -12,14 +12,14 @@
         alt=""
       />
       <div>
-        <a (click)="redirection(detail.htmlURL)" href="">View Profile</a>
+        <a class="gradient__text text-2xl" (click)="redirection(detail.htmlURL)" href="">View Profile</a>
       </div>
     </div>
     <div class="flex flex-col pl-10 space-y-1 md:w-1/2">
-      <p>Name: {{ detail.name }}</p>
-      <p>Following: {{ detail.following }}</p>
-      <p>{{ detail.followers }} :Followers</p>
-      <p>Joined: {{ detail.creationDate | date }}</p>
+      <p class="font-mono">Name {{ detail.name }}</p>
+      <p class="font-mono">Following {{ detail.following }}</p>
+      <p class="font-mono">{{ detail.followers }} Followers</p>
+      <p class="font-mono">Joined on {{ detail.creationDate | date }}</p>
     </div>
   </div>
 </section>
@@ -27,7 +27,7 @@
 <!-- Repos section -->
 <section>
   <div class="flex justify-center items-center px-6 mt-10">
-    <h2 class="text-center max-w-md pt-5 text-3xl md:text-4xl md:text-left">
+    <h2 class="gradient__text text-center max-w-md pt-5 text-3xl md:text-4xl md:text-left">
       Repositories
     </h2>
   </div>
@@ -42,7 +42,7 @@
       <div class="relative min-h-16 max-w-sm rounded overflow-hidden shadow-lg flex flex-col h-full">
         <div class="px-6 py-4 flex-1">
           <div class="font-bold text-xl mb-2">{{ rep.name }}</div>
-          <p class="text-gray-700 text-base">
+          <p class="text-gray-700 text-base font-mono">
             {{
               rep?.description?.length > 10
                 ? rep?.description?.split(" ").slice(1, 10).join(" ") + "..."
@@ -52,7 +52,7 @@
         </div>
         <div class="px-6 py-4">
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-            <a target="_blank" href="{{ rep.htmlURL }}">View Repo</a>
+            <a class="font-mono" target="_blank" href="{{ rep.htmlURL }}">View Repo</a>
           </span>
         </div>
       </div>
