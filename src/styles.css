@@ -4,10 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  background-image: url('');
-  background-repeat: no-repeat;
-  background-size: 800px;
-  background-position: 90% -25%;
-} */
+:root {
+  --font-family: 'Manrope', sans-serif;
+  --gradient-text: linear-gradient();
+
+  --color-bg: #040c18;
+  --color-footer: #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --colour-subtexr: #FF8A71;
+}
 

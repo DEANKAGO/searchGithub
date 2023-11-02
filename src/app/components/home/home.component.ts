@@ -24,6 +24,7 @@ export class HomeComponent {
     this.info.userApi(`@api.github.com/users/${this.inputData}`)
     this.router.navigate(['/search'])
     myForm.reset()
+    
   }
 
   repoSearch(myForm: NgForm) {
@@ -36,7 +37,7 @@ export class HomeComponent {
     myForm.reset()
   }
 
-
+  
 
 
 

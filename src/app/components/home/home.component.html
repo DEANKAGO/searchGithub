@@ -1,56 +1,58 @@
 <!-- landing page -->
 
-<section>
-    <div class="container flex flex-col-reverse items-center pb-5 px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
-        <div class="flex flex-col mb32 space-y-12 md:w-1/2">
-            <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
-                You are on the right path
-            </h1>
-            <p class="max-w-sm text-center md:text-left">
-                gSearch is a valuable resource for developers and organizations looking to integrate GitHub data into their applications, analyze repositories, track issues, and more.
-            </p>
-            <form 
-            #myForm="ngForm"  
-            action=""
-            id="myForm"
-            name="myForm"
-            (ngSubmit)="userSearch(myForm)"
-            class="flex justify-center space-x-2 md:justify-start"
-            >
-                <input 
-                name="inputData" 
-                [(ngModel)] ='inputData' 
-                class="border-slate-400 w-2/4 mr-1 border-2 rounded-full py-1 px-5" 
-                type="search"  
-                placeholder="Username..." 
-                required>
-                <button type="submit" value="submit" [disabled]="myForm.invalid">
-                    <svg class="w-7 inline-block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
-                    </svg>
-                </button> 
-            </form>
-        </div>
-        <div class="md:w-1/2">
-            <img class="rounded-md " src="assets/images/ain.avif" alt="logo">
-        </div>
+<div class="section container flex flex-col-reverse items-center pb-5 px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+    <div class="flex flex-col mb32 space-y-12 md:w-1/2">
+        <h1 class="gradient__text max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+            GitHub user and Repository Search
+        </h1>
+        <p class="max-w-sm text-center md:text-left">
+            Discover and explore user profiles, including their repositories, contributions, and more..
+        </p>
+        <form 
+        #myForm="ngForm"  
+        action=""
+        id="myForm"
+        name="myForm"
+        (ngSubmit)="userSearch(myForm)"
+        class="flex justify-center space-x-2 md:justify-start"
+        >
+            <input 
+            name="inputData" 
+            [(ngModel)] ='inputData' 
+            class="border-slate-400 w-2/4 mr-1 border-2 rounded-full py-1 px-5" 
+            type="search"  
+            placeholder="Username..." 
+            required>
+            <button type="submit" value="submit" [disabled]="myForm.invalid">
+                <svg class="w-7 inline-block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                </svg>
+            </button> 
+        </form>
     </div>
-</section>
+    <div class="md:w-1/2">
+        <img class="rounded-md " src="assets/images/ain.avif" alt="logo">
+    </div>
+</div>
 
 
 <!-- about section -->
 
-<section>
-    <div class="container w-3/4 flex flex-col items-center space-y-12 px-6 mx-auto mb32 mt-10 bg-red-200">
-        <h2 class="max-w-md pt-5 text-3xl md:text-4xl md:text-left">
-            About Us
-        </h2>
-        <p class="max-w-sm text-center w-full pb-5">
-            gSearch is a powerful online tool designed for developers, tech enthusiasts, and open-source enthusiasts alike. It simplifies the process of finding GitHub repositories and code snippets on virtually any topic, making it an invaluable resource for discovering, contributing to, and collaborating on exciting open-source projects. rtvuybjncgfh
-        </p>
-    </div>
-    
-</section>
+<div
+    id="about"
+    class="bg container w-full flex flex-col items-center space-y-12 px-6 mx-auto mb-32 mt-10"
+    style="background-image: url('../../../assets/images/bg-tablet-pattern.svg');"
+>
+    <h2 class="gradient__text max-w-md pt-5 text-3xl md:text-4xl text-center md:text-left">
+        About Our Search App
+    </h2>
+    <p class="max-w-md text-center">
+        Welcome to the GitHub Repository Search app, a powerful tool designed for developers, tech enthusiasts, and open-source enthusiasts. Our app simplifies the process of finding GitHub repositories and code snippets on virtually any topic, making it an invaluable resource for discovering, contributing to, and collaborating on exciting open-source projects.
+    </p>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+
+</div>
+
+    
 <!-- (click)="search()" -->
